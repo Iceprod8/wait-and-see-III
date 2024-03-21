@@ -32,7 +32,7 @@ export default function Salle({ userData, data }) {
     }, []);
 
     useEffect(() => {
-        const socket = io('http://88.120.44.229:54321');
+        const socket = io('https://waitandsee3.freeboxos.fr:54321/');
       
         socket.on("return_card", (index) => {
             setFlippedCards((prevFlippedCards) => {
@@ -65,7 +65,7 @@ export default function Salle({ userData, data }) {
 
     const handleReturnCard = (index) => {
         if (isHost) {
-            const socket = io('http://88.120.44.229:54321');
+            const socket = io('https://waitandsee3.freeboxos.fr:54321/');
             socket.emit("return_card", index);
         }
     };
