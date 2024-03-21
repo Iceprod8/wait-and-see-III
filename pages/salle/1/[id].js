@@ -32,7 +32,7 @@ export default function Salle({ userData, data }) {
     }, []);
 
     useEffect(() => {
-        const socket = io();
+        const socket = io('http://88.120.44.229:54321');
       
         socket.on("return_card", (index) => {
             setFlippedCards((prevFlippedCards) => {
@@ -65,7 +65,7 @@ export default function Salle({ userData, data }) {
 
     const handleReturnCard = (index) => {
         if (isHost) {
-            const socket = io();
+            const socket = io('http://88.120.44.229:54321');
             socket.emit("return_card", index);
         }
     };
@@ -80,7 +80,7 @@ export default function Salle({ userData, data }) {
                             const finish = finishFlippedCards.has(index)
                             return (
                                 <Image
-                                    key={el.id}
+                                    key={index + 1000}
                                     width={1000}
                                     height={1000}
                                     src={el.type == "png" ? (el.images.replace("./public", "")) : ("data:image/png;base64," + el.images)}
@@ -108,7 +108,7 @@ export default function Salle({ userData, data }) {
                             const isFlipped = flippedCards.has(index);
                             return (
                                 <Image
-                                    key={index}
+                                    key={index + 10000}
                                     width={1000}
                                     height={1000}
                                     src={"/images/background.png"}
