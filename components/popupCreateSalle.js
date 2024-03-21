@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState } from "react";
 
 export default function PopupCreateSalle({ userData, onClose }) {
@@ -201,7 +202,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                                 <span className="cursor-pointer text-blue-500">*</span>
                                                 {isHovered && (
                                                     <span className="absolute z-50 left-full top-0 ml-2 block w-64 text-xs bg-gray-700 p-2 border border-gray-200 rounded shadow-lg">
-                                                        il est le meilleur serait d"avoir 59 mais vous pouvez en avoir moins ou plus c"est vous qui voyez le reste si il en manque sera remplacé par des cartes du set originel.
+                                                        il est le meilleur serait d&quot;avoir 59 mais vous pouvez en avoir moins ou plus c&quot;est vous qui voyez le reste si il en manque sera remplacé par des cartes du set originel.
                                                     </span>
                                                 )}
                                             </span>
@@ -254,11 +255,11 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                 <div className="flex flex-row">
                                     <button onClick={() => { handleFinalSelection(false) }} class="w-full max-w-2xl flex flex-col justify-center items-center block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 hover:bg-gray-600">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Un joueur pour un seul ordinateur</h5>
-                                        <img className="h-40 w-40" src="/images/solo.png" alt="Solo Player" />
+                                        <Image className="h-40 w-40" src="/images/solo.png" alt="Solo Player" />
                                     </button>
                                     <button onClick={() => { handleSelectionPerso(false) }} class="w-full max-w-2xl flex flex-col justify-center items-center block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 hover:bg-gray-600">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Plusieurs joueurs pour un seul ordinateur</h5>
-                                        <img className="h-40 w-40" src="/images/multijoueur.png" alt="Multiplayer Player" />
+                                        <Image className="h-40 w-40" src="/images/multijoueur.png" alt="Multiplayer Player" />
                                     </button>
                                 </div>
                                 <div className="flex flex-row items-center justify-center mt-6 w-full gap-6">

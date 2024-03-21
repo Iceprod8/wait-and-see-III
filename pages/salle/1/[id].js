@@ -79,7 +79,7 @@ export default function Salle({ userData, data }) {
                             const isFlipped = flippedCards.has(index);
                             const finish = finishFlippedCards.has(index)
                             return (
-                                <img
+                                <Image
                                     key={el.id}
                                     src={el.type == "png" ? (el.images.replace("./public", "")) : ("data:image/png;base64," + el.images)}
                                     className={`absolute ${isFlipped ? "flipped" : ""}`}

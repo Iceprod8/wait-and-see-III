@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import checkAuth from "@/lib/checkAuth";
+import Image from "next/image";
 
 export default function Valid({ userData }) {
     const [isAnimating, setIsAnimating] = useState(false);
@@ -26,10 +27,10 @@ export default function Valid({ userData }) {
                 <h5 className="mb-4 flex flex-row items-center justify-center text-2xl font-bold tracking-tight text-gray-900 gap-1">
                     <div className={`flex flex-row relative ${isAnimating ? "animating" : ""}`}>
                         <span className={`${isAnimating ? "absolute" : "hidden"} crossIcon`}>
-                            <img width="24" height="24" src="https://img.icons8.com/emoji/48/cross-mark-emoji.png" alt="cross-mark-emoji" />
+                            <Image width="24" height="24" src="https://img.icons8.com/emoji/48/cross-mark-emoji.png" alt="cross-mark-emoji" />
                         </span>
                         <span className={`${isAnimating ? "hidden" : "absolute"} checkIcon`}>
-                            <img width="24" height="24" src="https://img.icons8.com/emoji/48/check-mark-emoji.png" alt="check-mark-emoji" />
+                            <Image width="24" height="24" src="https://img.icons8.com/emoji/48/check-mark-emoji.png" alt="check-mark-emoji" />
                         </span>
                     </div>
                     Votre compte a été valider
