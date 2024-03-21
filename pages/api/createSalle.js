@@ -13,7 +13,7 @@ const getDefaultImages = async () => Promise.all(cardsOriginal.map(async card =>
 export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
-    if (req.method !== "POST") return res.status(405).setHeader("Allow", ["POST"]).redirect(302, "/verification/invalid");
+    if (req.method !== "POST") return res.status(405).setHeader("Allow", ["POST"]).redirect(302, "/");
     new IncomingForm().parse(req, async (err, fields, files) => {
         if (err) return res.status(500).json({ error: "Erreur lors du parsing du formulaire : " + err });
         const { nomSalle, mdpSalle, joueurs, proprietaire } = fields, uuidSalle = generateUUID();
@@ -25,16 +25,18 @@ export default async function handler(req, res) {
         })
         const filesArray = JSON.parse(JSON.stringify(Object.keys(files).map(key => files[key])));
         let userImagesBase64 = [];
-        for (let i = 0; i <= filesArray[0].length ; i++) {
-            if (!filesArray[0][i]) continue;
-            try {
-                const buffer = await fs.readFile(filesArray[0][i].filepath);
-                userImagesBase64.push({ type: "base64", base64: buffer.toString("base64") });
-            } catch (readError) {
-                console.error("Error reading file:", readError);
+        if (filesArray && filesArray.length > 0) {
+            for (let i = 0; i <= filesArray[0].length ; i++) {
+                if (!filesArray[0][i]) continue;
+                try {
+                    const buffer = await fs.readFile(filesArray[0][i].filepath);
+                    userImagesBase64.push({ type: "base64", base64: buffer.toString("base64") });
+                } catch (readError) {
+                    console.error("Error reading file:", readError);
+                }
             }
         }
-        let allImages = await getDefaultImages(), finalImages = userImagesBase64.concat(allImages).slice(0, 59);
+        let allImages = await getDefaultImages(), finalImages = userImagesBase64.concat(shuffleArray(allImages)).slice(0, 59);
         console.log(finalImages)
         finalImages = shuffleArray(finalImages.reduce((acc, card, index) => {
             acc.push(...Array.from({ length: getCount(card.id) }, () => ({ images: card.base64, id: index + 1, type: card.type ? "png" : "base64" })));

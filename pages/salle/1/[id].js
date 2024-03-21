@@ -81,6 +81,8 @@ export default function Salle({ userData, data }) {
                             return (
                                 <Image
                                     key={el.id}
+                                    width={1000}
+                                    height={1000}
                                     src={el.type == "png" ? (el.images.replace("./public", "")) : ("data:image/png;base64," + el.images)}
                                     className={`absolute ${isFlipped ? "flipped" : ""}`}
                                     alt={`Card ${el.id}`}
@@ -107,6 +109,8 @@ export default function Salle({ userData, data }) {
                             return (
                                 <Image
                                     key={index}
+                                    width={1000}
+                                    height={1000}
                                     src={"/images/background.png"}
                                     className={`${isFlipped ? "hidden" : "absolute"}`}
                                     alt={`Card ${el.id}`}

@@ -255,11 +255,11 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                 <div className="flex flex-row">
                                     <button onClick={() => { handleFinalSelection(false) }} class="w-full max-w-2xl flex flex-col justify-center items-center block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 hover:bg-gray-600">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Un joueur pour un seul ordinateur</h5>
-                                        <Image className="h-40 w-40" src="/images/solo.png" alt="Solo Player" />
+                                        <Image className="h-40 w-40" width={1000} height={1000} src="/images/solo.png" alt="Solo Player" />
                                     </button>
                                     <button onClick={() => { handleSelectionPerso(false) }} class="w-full max-w-2xl flex flex-col justify-center items-center block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 hover:bg-gray-600">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Plusieurs joueurs pour un seul ordinateur</h5>
-                                        <Image className="h-40 w-40" src="/images/multijoueur.png" alt="Multiplayer Player" />
+                                        <Image className="h-40 w-40" width={1000} height={1000} src="/images/multijoueur.png" alt="Multiplayer Player" />
                                     </button>
                                 </div>
                                 <div className="flex flex-row items-center justify-center mt-6 w-full gap-6">

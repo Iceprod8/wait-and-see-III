@@ -17,8 +17,6 @@ nextApp.prepare().then(() => {
   const io = socketIo(server);
 
   io.on("connection", (socket) => {
-    console.log("Client connected");
-
     socket.on("return_card", index => {
         io.emit("return_card", index);
     });
