@@ -33,7 +33,7 @@ export default function Valid({ userData }) {
                             <Image width="24" height="24" src="https://img.icons8.com/emoji/48/cross-mark-emoji.png" alt="cross-mark-emoji" />
                         </span>
                     </div>
-                    Votre compte n"est pas valide
+                    Votre compte n&quot;est pas valide
                 </h5>
                 <p className="mb-3 font-normal text-gray-700">Vous allez être redirigé dans un instant.</p>
             </div>
