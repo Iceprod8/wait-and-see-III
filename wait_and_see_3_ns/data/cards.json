@@ -1,0 +1,356 @@
+[
+    {
+        "id": "1",
+        "name": "BFF",
+        "nombre": 1,
+        "description": "choisis un meilleur ami. quand l'un de vous deux doit boire, vous pouvez vous partager des gorgées. buvez 2 gorgées dès maintenant pour célébrer cette merveilleuse amitié !"
+    },
+    {
+        "id": "2",
+        "name": "Petit comique",
+        "nombre": 2,
+        "description": "tu racontes une blague. si la majorité ne rigole pas, tu bois 2 gorgées. ou tu proposes un débat (pour ou contre qqch). si tu fais partis de la minortié, tu bois 3 gorgées."
+    },
+    {
+        "id": "3",
+        "name": "Nudiste",
+        "nombre": 1,
+        "description": "tu enlèves autant de vêtement que tu veux. pour chaque vêtement enlevé, tu distribue 3 gorgées. (6 gorgées max. par personne)"
+    },
+    {
+        "id": "4",
+        "name": "Purification",
+        "nombre": 2,
+        "description": "tous les effets négatifs sur toi se dissipent. si tu n'as d'effet négatif, tu bois une gorgée car tu es encore trop pur."
+    },
+    {
+        "id": "5",
+        "name": "Dan",
+        "nombre": 1,
+        "description": "tu distribues 18 gorgées. (6 max. par personne)"
+    },
+    {
+        "id": "6",
+        "name": "Esclave I",
+        "nombre": 2,
+        "description": "tu désignes un esclave et bois autant de gorgées qu'il y a de personnes entre vous pour l'acheter. il peut boire 8 gorgées pour toi."
+    },
+    {
+        "id": "7",
+        "name": "Alcoolique Anonyme",
+        "nombre": 2,
+        "description": "tu ne bois plus pendant 3 tours. une fois le temps imparti écoulé, tu bois tout ce que tu as esquivé durant ces 3 derniers tours."
+    },
+    {
+        "id": "8",
+        "name": "Gamerz",
+        "nombre": 1,
+        "description": "entre la personne à ta droite et celle à ta gauche, qui est la plus nul aux jeux vidéo ? le gros naze boit 2 gorgées."
+    },
+    {
+        "id": "9",
+        "name": "Glou Glou! I",
+        "nombre": 2,
+        "description": "tout le monde boit 2 gorgées !"
+    },
+    {
+        "id": "10",
+        "name": "Glou Glou! II",
+        "nombre": 3,
+        "description": "tout le monde boit 3 gorgées !"
+    },
+    {
+        "id": "11",
+        "name": "Double Ration",
+        "nombre": 2,
+        "description": "pendant 2 tours tu bois le double de gorgées. bois en déjà 2 (seulement) dès maintenant pour t’échauffer"
+    },
+    {
+        "id": "12",
+        "name": "Ivrogne I",
+        "nombre": 1,
+        "description": "Ceux qui n'ont pas bu depuis 48h boivent 3 gorgées. Ceux qui ont bu durant ces dernières 48h boivent 1 gorgées."
+    },
+    {
+        "id": "13",
+        "name": "Ivrogne II",
+        "nombre": 1,
+        "description": "Ceux qui n'ont pas bu depuis 48h boivent 6 gorgées. Ceux qui ont bu durant ces dernières 48h boivent 3 gorgées."
+    },
+    {
+        "id": "14",
+        "name": "Je n'ai jamais",
+        "nombre": 2,
+        "description": "tu racontes un 'je n'ai jamais'. ceux à qui c'est déjà arrivé boivent 3 gorgées."
+    },
+    {
+        "id": "15",
+        "name": "Jonathan",
+        "nombre": 1,
+        "description": "tu deviens zen. tu bois 2 shots en poker face pour nous montrer ta zénitude. si le peuple juge que tu n’es pas assez zen, tu recommences !"
+    },
+    {
+        "id": "16",
+        "name": "Loi",
+        "nombre": 2,
+        "description": "vous imposez une nouvelle règle."
+    },
+    {
+        "id": "17",
+        "name": "Tempête sous la couette",
+        "nombre": 2,
+        "description": "tu désignes 2 personnes qui seront en couple. quand l'une bois, l'autre boit aussi."
+    },
+    {
+        "id": "18",
+        "name": "Pillier de bar",
+        "nombre": 3,
+        "description": "tu bois 4 gorgées. si cela finis ton verre, tu re-pioche une carte."
+    },
+    {
+        "id": "19",
+        "name": "Surprise du chef",
+        "nombre": 1,
+        "description": "tu bois 4 gorgées. si tu montres ton sexe, tout le monde cul sec (sauf toi)."
+    },
+    {
+        "id": "20",
+        "name": "Jésus",
+        "nombre": 1,
+        "description": "tu libères une personne de ses effets négatifs ou tu bois 2 gorgées. si personne n'a d'effet négatif, tu distribues 3 gorgées."
+    },
+    {
+        "id": "21",
+        "name": "Shifumi",
+        "nombre": 3,
+        "description": "tu désignes une personne pour faire un 'pierre-feuille-ciseaux'. le perdant boit 3 gorgées."
+    },
+    {
+        "id": "22",
+        "name": "Zone contaminée",
+        "nombre": 2,
+        "description": "à partir de ton prochain tour, dès que tu pioches une carte, les personnes à ta droite et à ta gauche boivent 1 gorgées."
+    },
+    {
+        "id": "23",
+        "name": "Tournée générale I",
+        "nombre": 4,
+        "description": "distribues 2 gorgées."
+    },
+    {
+        "id": "24",
+        "name": "Tournée générale II",
+        "nombre": 3,
+        "description": "distribues 3 gorgées."
+    },
+    {
+        "id": "25",
+        "name": "Tournée générale III",
+        "nombre": 2,
+        "description": "distribues 4 gorgées."
+    },
+    {
+        "id": "26",
+        "name": "Tournée générale IV",
+        "nombre": 2,
+        "description": "distribues 5 gorgées."
+    },
+    {
+        "id": "27",
+        "name": "Trou I",
+        "nombre": 1,
+        "description": "tu désignes 1 personne pour faire un cul-sec avec toi ou tout le monde boit 2 gorgées."
+    },
+    {
+        "id": "28",
+        "name": "Trou II",
+        "nombre": 1,
+        "description": "tu désignes 2 personnes pour faire un cul-sec avec toi ou tout le monde boit 3 gorgées."
+    },
+    {
+        "id": "29",
+        "name": "Trou III",
+        "nombre": 1,
+        "description": "tu désignes 1 personne qui doit cul-sec ou tout le monde boit 4 gorgées."
+    },
+    {
+        "id": "30",
+        "name": "Wait and see ?!!",
+        "nombre": 4,
+        "description": "tu bois autant de gorgées qu'il y a eu de cartes 'Wait and see ?!!' piochées. à la 4ème carte piochée, tu cul-sec."
+    },
+    {
+        "id": "31",
+        "name": "Fleonyx",
+        "nombre": 1,
+        "description": "tout le monde boit +2 gorgées pendant 3 tours ou tout le monde boit +4 gorgées pendant 1 tour (max. 12 gorgées bonus)"
+    },
+    {
+        "id": "32",
+        "name": "Gros cerveau",
+        "nombre": 1,
+        "description": "tout le monde s'appelle par son prénom + nom. si quelqu'un oublie de le faire, il boit 2 gorgées."
+    },
+    {
+        "id": "33",
+        "name": "Homme de fer",
+        "nombre": 1,
+        "description": "cul-sec ton verre. si c'est une réussite, tous les autres joueurs boivent +2 gorgées pendant 2 tours. si c'est un échec, tu bois +3 gorgées pendant 1 tour."
+    },
+    {
+        "id": "34",
+        "name": "Homme de bronze",
+        "nombre": 1,
+        "description": "bois 3 gorgées. si c'est une réussite tout les autres joueurs boivent 2 gorgées. si c'est un échec, tu bois +6 gorgées pendant 2 tours."
+    },
+    {
+        "id": "35",
+        "name": "Tour de table",
+        "nombre": 2,
+        "description": "tu bois 1 gorgée, la personne à ta gauche 2, puis 3... et ainsi de suite jusqu'à revenir jusqu'à la personne à ta droite."
+    },
+    {
+        "id": "36",
+        "name": "Poivrot",
+        "nombre": 2,
+        "description": "tu bois 1 gorgée par personne qui joue au jeu en ce moment."
+    },
+    {
+        "id": "37",
+        "name": "Tic tac...",
+        "nombre": 2,
+        "description": "lors de ton prochain tour, avant de piocher une carte, cul-sec ton verre."
+    },
+    {
+        "id": "38",
+        "name": "Samoch'",
+        "nombre": 1,
+        "description": "si tu aimes le ricard tu bois 3 gorgées. si tu n'aimes pas le ricard tu bois 6 gorgées."
+    },
+    {
+        "id": "39",
+        "name": "Calendrier humain",
+        "nombre": 2,
+        "description": "tu dois donner la date de naissance de la personne à ta droite. si tu ne la connais pas tu bois 3 gorgées."
+    },
+    {
+        "id": "40",
+        "name": "Gaëtan",
+        "nombre": 1,
+        "description": "si tu aimes le picon tu bois 3 gorgées. si tu n'aimes pas le picon tu bois 6 gorgées."
+    },
+    {
+        "id": "41",
+        "name": "Raph",
+        "nombre": 1,
+        "description": "+1 gorgée pour chaque joueur jusqu'à la fin de la partie. (cet effet ne peut être purifié par 'Jésus' ou 'Purification'.)"
+    },
+    {
+        "id": "42",
+        "name": "Dragibo",
+        "nombre": 1,
+        "description": "distribue 5 gorgées. le prochain joueur pioche 2 cartes supplémentaire."
+    },
+    {
+        "id": "43",
+        "name": "Bébé Dragibo",
+        "nombre": 1,
+        "description": "distribue 1 gorgée. le prochain joueur pioche 1 carte supplémentaire?"
+    },
+    {
+        "id": "44",
+        "name": "Julien",
+        "nombre": 1,
+        "description": "les effets néfastes sur toi ne s'appliquent pas le temps de cette carte. les personnes à ta droite et à ta gauche boivent chacunes 4 gorgées. les autres 2 gorgées."
+    },
+    {
+        "id": "45",
+        "name": "Duo inséparable I",
+        "nombre": 1,
+        "description": "les deux personnes à ta droite boivent 3 gorgées chacune."
+    },
+    {
+        "id": "46",
+        "name": "Duo inséparable II",
+        "nombre": 1,
+        "description": "les deux personnes à ta gauche boivent 3 gorgées chacune."
+    },
+    {
+        "id": "47",
+        "name": "Collègue I",
+        "nombre": 2,
+        "description": "choisis une personne, vous buvez tous les deux 2 gorgées."
+    },
+    {
+        "id": "48",
+        "name": "Collègue II",
+        "nombre": 2,
+        "description": "choisis une personne, vous buvez tous les deux 3 gorgées."
+    },
+    {
+        "id": "49",
+        "name": "Collègue III",
+        "nombre": 1,
+        "description": "choisis une personne, vous buvez tous les deux 4 gorgées."
+    },
+    {
+        "id": "50",
+        "name": "Petite pause",
+        "nombre": 2,
+        "description": "petite pause."
+    },
+    {
+        "id": "51",
+        "name": "Mauvaise influence",
+        "nombre": 3,
+        "description": "tu peux boire jusqu'à 3 gorgées, les autres joueurs en boivent autant que toi."
+    },
+    {
+        "id": "52",
+        "name": "Tour de magie",
+        "nombre": 1,
+        "description": "choisis quelqu'un, à chaque carte que tu pioches, il boit une gorgée."
+    },
+    {
+        "id": "53",
+        "name": "Toupille",
+        "nombre": 1,
+        "description": "tu tournes 10 fois sur toi-même. si tu tombes, tu bois 2 gorgées."
+    },
+    {
+        "id": "54",
+        "name": "Bizutage I",
+        "nombre": 1,
+        "description": "pendant 1 tour tu bois 1 gorgée dès qu'un joueur pioche 1 carte."
+    },
+    {
+        "id": "55",
+        "name": "Bizutage II",
+        "nombre": 1,
+        "description": "pendant 1 tour tu bois 2 gorgées dès qu'un joueur pioche 1 carte."
+    },
+    {
+        "id": "56",
+        "name": "Esclave II",
+        "nombre": 1,
+        "description": "tu désignes un esclave et bois autant de gorgées qu'il y a de personnes entre vous pour l'acheter. il peut boire 12 gorgées pour toi."
+    },
+    {
+        "id": "57",
+        "name": "Crime organisé",
+        "nombre": 2,
+        "description": "les autres joueurs votent pour te faire boire : 2, 4 ou 6 gorgées. (la majorité l'emporte)"
+    },
+    {
+        "id": "58",
+        "name": "Fraicheur matinale",
+        "nombre": 1,
+        "description": "la personne qui s'est levée le plus tôt aujourd'hui distribue 3 gorgées."
+    },
+    {
+        "id": "59",
+        "name": "Fraicheur vespérale",
+        "nombre": 1,
+        "description": "la personne qui s'est levée le plus tard aujourd'hui bois 2 gorgées."
+    }
+]
