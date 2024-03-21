@@ -1,10 +1,10 @@
-const { createServer } = require('http');
-const { parse } = require('url');
-const next = require('next');
-const socketIo = require('socket.io');
+const { createServer } = require("http");
+const { parse } = require("url");
+const next = require("next");
+const socketIo = require("socket.io");
 
 const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = process.env.NODE_ENV !== 'production';
+const dev = process.env.NODE_ENV !== "production";
 const nextApp = next({ dev });
 const nextHandler = nextApp.getRequestHandler();
 
@@ -16,18 +16,18 @@ nextApp.prepare().then(() => {
 
   const io = socketIo(server);
 
-  io.on('connection', (socket) => {
-    console.log('Client connected');
+  io.on("connection", (socket) => {
+    console.log("Client connected");
 
-    socket.on('return_card', index => {
-        io.emit('return_card', index);
+    socket.on("return_card", index => {
+        io.emit("return_card", index);
     });
       
-    socket.on('disconnect', () => {
-      console.log('Client disconnected');
+    socket.on("disconnect", () => {
+      console.log("Client disconnected");
     });
 
-    // Autres gestionnaires d'événements Socket.IO ici
+    // Autres gestionnaires d"événements Socket.IO ici
   });
 
   server.listen(port, (err) => {

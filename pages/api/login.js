@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     }
     const { email, password, remember } = req.body;
     if (!email || !password) {
-        return res.status(400).json({ message: "L'email et le mot de passe sont requis." });
+        return res.status(400).json({ message: "L\'email et le mot de passe sont requis." });
     }
     try {
         const { data: users, error: userFetchError } = await supabaseAdmin
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         const user = users[0];
         const passwordMatch = await bcrypt.compare(password, user.password);
         if (!passwordMatch) {
-            return res.status(401).json({ message: "L'email ou le mot de passe est incorrect." });
+            return res.status(401).json({ message: "L\'email ou le mot de passe est incorrect." });
         }
         const rememberToken = uuidv4();
         const { error: updateError } = await supabaseAdmin

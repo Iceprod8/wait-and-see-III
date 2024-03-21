@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
     const { pseudo, email, password, confirmPassword } = req.body;
     if (!pseudo || !email || !password || !confirmPassword) {
-        return res.status(400).json({ message: "Un des champs n'est pas remplis." });
+        return res.status(400).json({ message: "Un des champs n\'est pas remplis." });
     }
     if (password !== confirmPassword) {
         return res.status(400).json({ message: "Les mots de passe ne correspondent pas." });
@@ -44,7 +44,7 @@ export default async function handler(req, res) {
         await transporter.sendMail({
             from: process.env.EMAIL,
             to: email,
-            subject: "Vérification de l'email",
+            subject: "Vérification de l\'email",
             html: htmlEmail(verificationUrl),
         });
         const { error: insertUserError } = await supabaseAdmin

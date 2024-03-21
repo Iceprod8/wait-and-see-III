@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState } from "react";
 
 export default function PopupCreateSalle({ userData, onClose }) {
@@ -19,14 +19,14 @@ export default function PopupCreateSalle({ userData, onClose }) {
         setFiles(files.filter((_, i) => i !== index));
     };
     const getFileIcon = (fileName) => {
-        const extension = fileName.split('.').pop();
+        const extension = fileName.split(".").pop();
         switch (extension) {
-            case 'jpg':
-            case 'jpeg':
-            case 'png':
-            case 'gif':
+            case "jpg":
+            case "jpeg":
+            case "png":
+            case "gif":
                 return (<svg className="w-8 h-8 mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>);
-            case 'svg':
+            case "svg":
                 return (<svg className="w-8 h-8 mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l-2 2m0 0L5 6 3 8m4 0h12a2 2 0 002-2V4a2 2 0 00-2-2H5a2 2 0 00-2 2v2a2 2 0 002 2m12 0l-2 2m0 0l2 2m0-2H7m12 0l2 2m-2-2l2-2" /></svg>);
             default:
                 return (<svg className="w-8 h-8 mb-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 5l9-5-9-5-9 5 9 5z" /></svg>);
@@ -34,10 +34,10 @@ export default function PopupCreateSalle({ userData, onClose }) {
     };
     const handleKeyPress = (e) => {
         const trimmedText = searchText.trim();
-        if (e.key === 'Enter' && trimmedText) {
+        if (e.key === "Enter" && trimmedText) {
             e.preventDefault();
             addOrRemovePseudo(trimmedText);
-            setSearchText('');
+            setSearchText("");
         }
     };
     const addOrRemovePseudo = (pseudo) => {
@@ -61,13 +61,13 @@ export default function PopupCreateSalle({ userData, onClose }) {
 
     const handleSelectionSet = async () => {
         setType("Type de partie")
-        document.querySelector('#selectionSet').classList.add('hidden');
-        document.querySelector('#selectionImgPerso').classList.add('hidden');
-        document.querySelector('#selectionPersoType').classList.add('hidden');
-        document.querySelector('#selectionPerso').classList.add('hidden');
-        document.querySelector('#selectionFinal').classList.add('hidden');
+        document.querySelector("#selectionSet").classList.add("hidden");
+        document.querySelector("#selectionImgPerso").classList.add("hidden");
+        document.querySelector("#selectionPersoType").classList.add("hidden");
+        document.querySelector("#selectionPerso").classList.add("hidden");
+        document.querySelector("#selectionFinal").classList.add("hidden");
         setTransformX("-40%");
-        document.querySelector('#selectionSet').classList.remove('hidden');
+        document.querySelector("#selectionSet").classList.remove("hidden");
         await new Promise(resolve => setTimeout(resolve, 10));
         setTransformX("0%");
     }
@@ -75,70 +75,70 @@ export default function PopupCreateSalle({ userData, onClose }) {
 
     const handleCustomizeClick = async (retour) => {
         setType("Selection des images")
-        document.querySelector('#selectionSet').classList.add('hidden');
-        document.querySelector('#selectionImgPerso').classList.add('hidden');
-        document.querySelector('#selectionPersoType').classList.add('hidden');
-        document.querySelector('#selectionPerso').classList.add('hidden');
-        document.querySelector('#selectionFinal').classList.add('hidden');
+        document.querySelector("#selectionSet").classList.add("hidden");
+        document.querySelector("#selectionImgPerso").classList.add("hidden");
+        document.querySelector("#selectionPersoType").classList.add("hidden");
+        document.querySelector("#selectionPerso").classList.add("hidden");
+        document.querySelector("#selectionFinal").classList.add("hidden");
         setTransformX(retour === false ? "40%" : "-40%");
-        document.querySelector('#selectionImgPerso').classList.remove('hidden');
+        document.querySelector("#selectionImgPerso").classList.remove("hidden");
         await new Promise(resolve => setTimeout(resolve, 10));
         setTransformX("0%");
     };
 
     const handleSelectionPersoType = async (retour) => {
         setType("Type de jeu")
-        document.querySelector('#selectionSet').classList.add('hidden');
-        document.querySelector('#selectionImgPerso').classList.add('hidden');
-        document.querySelector('#selectionPersoType').classList.add('hidden');
-        document.querySelector('#selectionPerso').classList.add('hidden');
-        document.querySelector('#selectionFinal').classList.add('hidden');
+        document.querySelector("#selectionSet").classList.add("hidden");
+        document.querySelector("#selectionImgPerso").classList.add("hidden");
+        document.querySelector("#selectionPersoType").classList.add("hidden");
+        document.querySelector("#selectionPerso").classList.add("hidden");
+        document.querySelector("#selectionFinal").classList.add("hidden");
         setTransformX(retour === false ? "40%" : "-40%");
-        document.querySelector('#selectionPersoType').classList.remove('hidden');
+        document.querySelector("#selectionPersoType").classList.remove("hidden");
         await new Promise(resolve => setTimeout(resolve, 10));
         setTransformX("0%");
     };
 
     const handleSelectionPerso = async (retour) => {
         setType("Nombre de joueurs")
-        document.querySelector('#selectionSet').classList.add('hidden');
-        document.querySelector('#selectionImgPerso').classList.add('hidden');
-        document.querySelector('#selectionPersoType').classList.add('hidden');
-        document.querySelector('#selectionPerso').classList.add('hidden');
-        document.querySelector('#selectionFinal').classList.add('hidden');
+        document.querySelector("#selectionSet").classList.add("hidden");
+        document.querySelector("#selectionImgPerso").classList.add("hidden");
+        document.querySelector("#selectionPersoType").classList.add("hidden");
+        document.querySelector("#selectionPerso").classList.add("hidden");
+        document.querySelector("#selectionFinal").classList.add("hidden");
         setTransformX(retour === false ? "40%" : "-40%");
-        document.querySelector('#selectionPerso').classList.remove('hidden');
+        document.querySelector("#selectionPerso").classList.remove("hidden");
         await new Promise(resolve => setTimeout(resolve, 10));
         setTransformX("0%");
     };
 
     const handleFinalSelection = async (retour) => {
         setType("Parametre")
-        document.querySelector('#selectionSet').classList.add('hidden');
-        document.querySelector('#selectionImgPerso').classList.add('hidden');
-        document.querySelector('#selectionPersoType').classList.add('hidden');
-        document.querySelector('#selectionPerso').classList.add('hidden');
-        document.querySelector('#selectionFinal').classList.add('hidden');
+        document.querySelector("#selectionSet").classList.add("hidden");
+        document.querySelector("#selectionImgPerso").classList.add("hidden");
+        document.querySelector("#selectionPersoType").classList.add("hidden");
+        document.querySelector("#selectionPerso").classList.add("hidden");
+        document.querySelector("#selectionFinal").classList.add("hidden");
         setTransformX(retour === false ? "40%" : "-40%");
-        document.querySelector('#selectionFinal').classList.remove('hidden');
+        document.querySelector("#selectionFinal").classList.remove("hidden");
         await new Promise(resolve => setTimeout(resolve, 10));
         setTransformX("0%");
     }
 
     const createSalle = async () => {
         const formData = new FormData(); // Utilisez FormData pour gérer les fichiers
-        formData.append('nomSalle', nomSalle || "Salle_" + Math.floor(Math.random() * 1000));
-        formData.append('mdpSalle', mdpSalle || "");
-        files.forEach(file => formData.append('files', file)); // Ajoutez chaque fichier à formData
-        formData.append('joueurs', JSON.stringify(selectedPseudo.length > 0 ? selectedPseudo : [{name:"IdentifiantUtilisateur"}]));
-        formData.append('proprietaire', userData.id);
+        formData.append("nomSalle", nomSalle || "Salle_" + Math.floor(Math.random() * 1000));
+        formData.append("mdpSalle", mdpSalle || "");
+        files.forEach(file => formData.append("files", file)); // Ajoutez chaque fichier à formData
+        formData.append("joueurs", JSON.stringify(selectedPseudo.length > 0 ? selectedPseudo : [{name:"IdentifiantUtilisateur"}]));
+        formData.append("proprietaire", userData.id);
         try {
-            const response = await fetch('/api/createSalle', {
-                method: 'POST',
+            const response = await fetch("/api/createSalle", {
+                method: "POST",
                 body: formData,
             });
             if (!response.ok) {
-                throw new Error('Erreur de création de la salle');
+                throw new Error("Erreur de création de la salle");
             }
             const salleCree = await response.json();
             window.location.href = salleCree.url;
@@ -201,7 +201,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                                 <span className="cursor-pointer text-blue-500">*</span>
                                                 {isHovered && (
                                                     <span className="absolute z-50 left-full top-0 ml-2 block w-64 text-xs bg-gray-700 p-2 border border-gray-200 rounded shadow-lg">
-                                                        il est le meilleur serait d'avoir 59 mais vous pouvez en avoir moins ou plus c'est vous qui voyez le reste si il en manque sera remplacé par des cartes du set originel.
+                                                        il est le meilleur serait d"avoir 59 mais vous pouvez en avoir moins ou plus c"est vous qui voyez le reste si il en manque sera remplacé par des cartes du set originel.
                                                     </span>
                                                 )}
                                             </span>
@@ -224,7 +224,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                             <div key={index} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className="relative flex flex-row justify-center items-center group">
                                                 <button onClick={() => removeFile(index)} className="flex flex-col items-center border border-1 rounded-md border-slate-500 w-20 p-2">
                                                     {getFileIcon(file.name)}
-                                                    <p className="truncate max-w-[80px]">{file.name.length > 7 ? `${file.name.replace(/(.svg|.png|.jpg|.gif)/g, '').substring(0, 5)}...` : file.name.replace(/(.svg|.png|.jpg|.gif)/g, '')}</p>
+                                                    <p className="truncate max-w-[80px]">{file.name.length > 7 ? `${file.name.replace(/(.svg|.png|.jpg|.gif)/g, "").substring(0, 5)}...` : file.name.replace(/(.svg|.png|.jpg|.gif)/g, "")}</p>
                                                 </button>
                                                 {hoveredIndex === index && (
                                                     <div onClick={() => removeFile(index)} className="absolute top-0 right-0 bg-red-500 text-white w-6 h-6 flex justify-center items-center cursor-pointer">
@@ -261,11 +261,11 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                         <img className="h-40 w-40" src="/images/multijoueur.png" alt="Multiplayer Player" />
                                     </button>
                                 </div>
-                                <div className='flex flex-row items-center justify-center mt-6 w-full gap-6'>
+                                <div className="flex flex-row items-center justify-center mt-6 w-full gap-6">
                                     <button
                                         type="button"
                                         onClick={() => {handleCustomizeClick(true)}}
-                                        className={`relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800 ${isDisabled ? 'disabled:bg-gray-300 disabled:cursor-not-allowed' : ''}`}
+                                        className={`relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800 ${isDisabled ? "disabled:bg-gray-300 disabled:cursor-not-allowed" : ""}`}
                                     >
                                         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                             Retour
@@ -276,7 +276,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                             <div id="selectionPerso" className="hidden transition-popup" style={{ transform: `translateX(${transformX})` }}>
                                 <div className="flex flex-col">
                                     <div className="flex flex-row justify-center items-center grid md:grid-cols-4 xl:grid-cols-4 gap-6 overflow-hidden w-full h-[300px] px-5 py-12 sm:px-6 lg:px-8 rounded-lg">
-                                        <div className='flex flex-col w-full col-span-4 gap-2 justify-center items-center'>
+                                        <div className="flex flex-col w-full col-span-4 gap-2 justify-center items-center">
                                             <div className="relative w-full flex flex-row">
                                                 <input type="search" id="search-dropdown" aria-describedby="floating_helper_text" className="block rounded-l-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onChange={e => setSearchText(e.target.value)} onKeyPress={handleKeyPress} value={searchText} />
                                                 <label htmlFor="search-dropdown" className="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Peusdo</label>
@@ -285,7 +285,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                                     disabled={selectedPseudo.length >= 8}
                                                     style={{ paddingBottom: "15px", paddingTop: "15px" }}
                                                     type="submit"
-                                                    className={`px-2.5 h-full text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ${selectedPseudo.length >= 8 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                    className={`px-2.5 h-full text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ${selectedPseudo.length >= 8 ? "opacity-50 cursor-not-allowed" : ""}`}
                                                 >                                                    <svg className="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 1v16M1 9h16" />
                                                     </svg>
@@ -294,14 +294,14 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                             <p id="floating_helper_text" className="w-full mb-1 text-xs text-gray-500">Minimum 4 joueurs et maximum 8 joueurs.</p>
                                         </div>
                                         {selectedPseudo.length > 0 && selectedPseudo.map((element) => (
-                                            <button onClick={() => supSelectedPseudo(element)} key={element} className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800'>
+                                            <button onClick={() => supSelectedPseudo(element)} key={element} className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800">
                                                 <span className="relative px-5 py-2.5 w-full transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                                     {element.slice(0, 10)}{element.length > 10 && "..."}
                                                 </span>
                                             </button>
                                         ))}
                                     </div>
-                                    <div className='flex flex-row items-center justify-center mt-6 w-full gap-6'>
+                                    <div className="flex flex-row items-center justify-center mt-6 w-full gap-6">
                                         <button
                                             type="button"
                                             onClick={() => {handleSelectionPersoType(true)}}
@@ -315,7 +315,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                             type="button"
                                             onClick={() => {handleFinalSelection(false)}}
                                             disabled={isDisabled}
-                                            className={`relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800 ${isDisabled ? 'disabled:bg-gray-300 disabled:cursor-not-allowed' : ''}`}
+                                            className={`relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800 ${isDisabled ? "disabled:bg-gray-300 disabled:cursor-not-allowed" : ""}`}
                                         >
                                             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                                 Suite
@@ -336,7 +336,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                             <input onChange={(e) => setMdpSalle(e.target.value)} type="password" name="password" id="password" placeholder="••••••••" className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white focus:ring-purple-500 focus:border-purple-500" />
                                         </div>
                                     </div>
-                                    <div className='flex flex-row items-center justify-center mt-6 w-full gap-6'>
+                                    <div className="flex flex-row items-center justify-center mt-6 w-full gap-6">
                                         <button
                                             type="button"
                                             onClick={() => {handleSelectionPersoType(true)}}
@@ -349,7 +349,7 @@ export default function PopupCreateSalle({ userData, onClose }) {
                                         <button
                                             type="button"
                                             onClick={createSalle}
-                                            className={`relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800 ${isDisabled ? 'disabled:bg-gray-300 disabled:cursor-not-allowed' : ''}`}
+                                            className={`relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800 ${isDisabled ? "disabled:bg-gray-300 disabled:cursor-not-allowed" : ""}`}
                                         >
                                             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                                 Creer
