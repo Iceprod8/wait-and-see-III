@@ -32,7 +32,7 @@ export default function Salle({ userData, data }) {
     }, []);
 
     useEffect(() => {
-        const socket = io('http://waitandsee3.freeboxos.fr:54321/');
+        const socket = io('https://wait-and-see-iii-server.vercel.app/');
       
         socket.on("return_card", (index) => {
             setFlippedCards((prevFlippedCards) => {
@@ -65,7 +65,7 @@ export default function Salle({ userData, data }) {
 
     const handleReturnCard = (index) => {
         if (isHost) {
-            const socket = io('http://waitandsee3.freeboxos.fr:54321/');
+            const socket = io('https://wait-and-see-iii-server.vercel.app/');
             socket.emit("return_card", index);
         }
     };
