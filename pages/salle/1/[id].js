@@ -18,6 +18,7 @@ export default function Salle({ userData, data }) {
     const [flippedCards, setFlippedCards] = useState(new Set());
     const [finishFlippedCards, setFinishFlippedCards] = useState(new Set());
     const isHost = joueurs.length > 0 && parseInt(joueurs[0].id) === userData.id;
+    const socket = io('https://wait-and-see-iii-server.vercel.app/');
 
     useEffect(() => {
         function handleResize() {
@@ -32,7 +33,7 @@ export default function Salle({ userData, data }) {
     }, []);
 
     useEffect(() => {
-        const socket = io('https://wait-and-see-iii-server.vercel.app/');
+        
       
         socket.on("return_card", (index) => {
             setFlippedCards((prevFlippedCards) => {
@@ -65,7 +66,6 @@ export default function Salle({ userData, data }) {
 
     const handleReturnCard = (index) => {
         if (isHost) {
-            const socket = io('https://wait-and-see-iii-server.vercel.app/');
             socket.emit("return_card", index);
         }
     };
